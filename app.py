@@ -180,7 +180,7 @@ if "my_name" not in st.session_state:
 if "last_seen_round" not in st.session_state:
   st.session_state.last_seen_round = -1
 
-st.title("🎭 ¿Quién Soy? - Juego en Grupo")
+st.title("🎭 ¿Quién Soy?")
 
 # formulario para ingresar los nombres
 if not st.session_state.my_name or st.session_state.my_name not in game["players"]:
