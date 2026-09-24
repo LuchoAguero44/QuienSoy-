@@ -184,7 +184,7 @@ st.title("🎭 ¿Quién Soy? - Juego en Grupo")
 
 # formulario para ingresar los nombres
 if not st.session_state.my_name or st.session_state.my_name not in game["players"]:
-  st.subheader("Ingresa tu nombre para unirte a la sala")
+  st.subheader("Ingresa tu nombre para jugar kp")
   name_input = st.text_input("Tu Nombre:")
 
   col_join, col_clear = st.columns(2)
@@ -205,7 +205,7 @@ if not st.session_state.my_name or st.session_state.my_name not in game["players
         st.warning("Por favor ingresa un nombre válido.")
 
   with col_clear:
-    if st.button("🗑️ Borrar lista de jugadores (Reiniciar Sala)"):
+    if st.button("🗑️ Borrar la lista de jogadores muito bem menino"):
       game["players"] = {}
       game["game_started"] = False
       game["finished_count"] = 0
@@ -229,7 +229,7 @@ col_user, col_exit = st.columns([3, 1])
 with col_user:
   st.caption(f"Jugando como: **{player_name}**")
 with col_exit:
-  if st.button("❌ Salir de la sala"):
+  if st.button("❌ Me piché y me voy"):
     if player_name in game["players"]:
       del game["players"][player_name]
     st.session_state.my_name = ""
@@ -284,7 +284,7 @@ def render_game():
 
     with col2:
       if st.button(
-          "🗑️ Borrar lista de jugadores", use_container_width=True
+          "🗑️ Siy thanos y borro a todo el mundo", use_container_width=True
       ):
         game["players"] = {}
         game["game_started"] = False
@@ -310,7 +310,7 @@ def render_game():
         countdown_box.markdown(
             f"""
                     <div class="countdown-card">
-                        <div class="countdown-text">📱 ¡PÓNTELO EN LA FRENTE!</div>
+                        <div class="countdown-text">📱 ¡PÓNTELO EN TU SYVA!</div>
                         {sec}
                     </div>
                     """,
@@ -321,7 +321,7 @@ def render_game():
       countdown_box.markdown(
           """
                 <div class="countdown-card">
-                    <div class="countdown-text">📱 ¡PÓNTELO EN LA FRENTE!</div>
+                    <div class="countdown-text">📱 ¡PÓNTELO EN TU SYVA!</div>
                     ¡YA!
                 </div>
                 """,
@@ -346,7 +346,7 @@ def render_game():
 
       # Botón para declarar adivinanza justo abajo
       if st.button(
-          "🎉 ¡ADIVINÉ MI PERSONAJE!", type="primary", use_container_width=True
+          "🎉 ¡ADIVINÉ MI PERSONAJE, SOY UN/A CRACK!", type="primary", use_container_width=True
       ):
         game["finished_count"] += 1
         rank = game["finished_count"]
