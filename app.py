@@ -284,7 +284,7 @@ def render_game():
 
     with col2:
       if st.button(
-          "🗑️ Siy thanos y borro a todo el mundo", use_container_width=True
+          "🗑️ Soy thanos y borro a todo el mundo", use_container_width=True
       ):
         game["players"] = {}
         game["game_started"] = False
